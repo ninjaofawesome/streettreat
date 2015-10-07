@@ -3,85 +3,93 @@
 //carts: hotdog, streetmeat, tacos, ice cream, fruit, waffel, nut cart, coffee cart
 
 //write a function to determine if the user is vegetarian, vegan, omnivore or flexitarian (boolean)
-function eatPrefs(){
-  var eatButtons = document.getElementsByClassName('eating-prefs');
-  var prefButton = eatButtons.id;
-  $(thisButton).click(function(){
-    var likes = this;
-    if(likes === 'veggie'){
-      console.log('Vegetarian');
-      var anything = false;
-    }
-    if(likes === 'vegan'){
-      console.log('Vegan');
-      var anything = false;
-    }
-    if(likes === 'omni'){
-      console.log('Omnivore');
-      var anything = true;
-    }
-    if(likes === 'flex'){
-      console.log('Flexitarian');
-      var anything = true;
-    }
-  });
-  return anything;
-}
 
-var prefs = eatPrefs();
-//write a function to determine if the user wants savory or sweet (boolean)
-function tasteType(){
-  var tasteButtons = document.getElementsByClassName('taste-type');
-  var yumButton = tasteButtons.id;
-  $(yumbutton).click(function(){
-    var taste = this;
-    if(taste == 'sweet'){
-      console.log('Sweet Treat!');
-      var craving = false;
-    }
-    if(taste == 'savory'){
-      console.log('Savory Treat!');
-      var craving = true;
-    }
-  })
-  return craving;
-}
-
-var tasty = tasteType();
-//write a function to determine hunger level?
-function howHungry(){
-  var hungerGames = document.getElementsByClassName('hunger-games');
-  var portionButton = hungerGames.id;
-  $(portionButton).click(function(){
-    var level = this;
-    if(level == 0){
-      console.log('snacktime');
-      var starving = false;
-    }
-    if(level == 1){
-      console.log('meal');
-      var starving = true;
-    }
-  })
-  return starving;
-}
-
-var hangry = howHungry();
-
-//write a function to tally results of trues and falses
-
-function sweetOrNah(ep, hl, c){
-  var eatType = ep,
-      hunger = hl,
-      crave = c;
+(function(){
+  console.log('logic loaded');
 
   var result = [];
-  //add results, determine likelyhood of flex, omni, veg, vegan
-  //use mustache to template results.
 
-}
+  function eatPrefs(){
+    var eatButtons = document.getElementsByClassName('eating-prefs');
+    $(eatButtons).click(function(){
+      var likes = this.id;
+      if(likes === 'veggie'){
+        console.log('Vegetarian');
+        var anything = false;
+      }
+      if(likes === 'vegan'){
+        console.log('Vegan');
+        var anything = false;
+      }
+      if(likes === 'omni'){
+        console.log('Omnivore');
+        var anything = true;
+      }
+      if(likes === 'flex'){
+        console.log('Flexitarian');
+        var anything = true;
+      }
+      result.push(anything);
+    });
 
-sweetOrNah(prefs, tasty, hangry);
+  }
+
+  eatPrefs();
+
+  //write a function to determine if the user wants savory or sweet (boolean)
+  function tasteType(){
+    var tasteButtons = document.getElementsByClassName('taste-type');
+    $(tasteButtons).click(function(){
+      var taste = this.id;
+      if(taste == 'sweet'){
+        console.log('Sweet Treat!');
+        var craving = false;
+      }
+      if(taste == 'savory'){
+        console.log('Savory Treat!');
+        var craving = true;
+      }
+      result.push(craving);
+    });
+  }
+
+  tasteType();
+  //write a function to determine hunger level?
+
+  function howHungry(){
+    var hungerGames = document.getElementsByClassName('hunger-games');
+    $(hungerGames).click(function(){
+      var level = this.id;
+      if(level == 0){
+        console.log('snacktime');
+        var starving = false;
+      }
+      if(level == 1){
+        console.log('meal');
+        var starving = true;
+      }
+      result.push(starving);
+    });
+  }
+
+  howHungry();
+
+  //write a function to tally results of trues and falses
+
+  function sweetOrNah(results){
+
+    //get results after clicks.
+    console.log(results)
+
+    //add results, determine likelyhood of flex, omni, veg, vegan
+    //use mustache to template results.
+
+  }
+
+  sweetOrNah(result);
+
+})();
+
   // food results
   // if vegan, sweet, snack = true, fruit
   // if vegan, savory, snack = true, pretzel
