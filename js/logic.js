@@ -6,73 +6,68 @@
 
 (function(){
   console.log('logic loaded');
-
-  var result = [];
-
   function eatPrefs(){
+    var result = [];
+
     var eatButtons = document.getElementsByClassName('eating-prefs');
+    var tasteButtons = document.getElementsByClassName('taste-type');
+    var hungerGames = document.getElementsByClassName('hunger-games');
+
     $(eatButtons).click(function(){
       var likes = this.id;
       if(likes === 'veggie'){
         console.log('Vegetarian');
-        var anything = false;
+        var anything = 2;
       }
       if(likes === 'vegan'){
         console.log('Vegan');
-        var anything = false;
+        var anything = 3;
       }
       if(likes === 'omni'){
         console.log('Omnivore');
-        var anything = true;
+        var anything = 1;
       }
       if(likes === 'flex'){
         console.log('Flexitarian');
-        var anything = true;
+        var anything = 0;
       }
       result.push(anything);
     });
+
+
+    $(tasteButtons).click(function(){
+      var taste = this.id;
+      if(taste == 'sweet'){
+        console.log('Sweet Treat!');
+        var craving = 0;
+      }
+      if(taste == 'savory'){
+        console.log('Savory Treat!');
+        var craving = 1;
+      }
+      result.push(craving);
+    });
+
+
+    $(hungerGames).click(function(){
+      var level = this.id;
+      if(level == 0){
+        console.log('snacktime');
+        var starving = 0;
+      }
+      if(level == 1){
+        console.log('meal');
+        var starving = 1;
+      }
+      result.push(starving);
+    });
+
+    console.log(result);
 
   }
 
   eatPrefs();
 
-  //write a function to determine if the user wants savory or sweet (boolean)
-  function tasteType(){
-    var tasteButtons = document.getElementsByClassName('taste-type');
-    $(tasteButtons).click(function(){
-      var taste = this.id;
-      if(taste == 'sweet'){
-        console.log('Sweet Treat!');
-        var craving = false;
-      }
-      if(taste == 'savory'){
-        console.log('Savory Treat!');
-        var craving = true;
-      }
-      result.push(craving);
-    });
-  }
-
-  tasteType();
-  //write a function to determine hunger level?
-
-  function howHungry(){
-    var hungerGames = document.getElementsByClassName('hunger-games');
-    $(hungerGames).click(function(){
-      var level = this.id;
-      if(level == 0){
-        console.log('snacktime');
-        var starving = false;
-      }
-      if(level == 1){
-        console.log('meal');
-        var starving = true;
-      }
-      result.push(starving);
-    });
-  }
-
-  howHungry();
 
   //write a function to tally results of trues and falses
 
