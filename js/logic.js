@@ -7,81 +7,54 @@
 (function(){
   console.log('logic loaded');
   function eatPrefs(){
-    var result = [];
-
-    var eatButtons = document.getElementsByClassName('eating-prefs');
-    var tasteButtons = document.getElementsByClassName('taste-type');
-    var hungerGames = document.getElementsByClassName('hunger-games');
-
-    $(eatButtons).click(function(){
-      var likes = this.id;
-      if(likes === 'veggie'){
-        console.log('Vegetarian');
-        var anything = 2;
+    var buttons = document.getElementsByClassName('btn');
+    var results=[];
+    $(buttons).click(function(){
+      var pref = this.id;
+      if(pref === 'nosh'){
+        results.push(0);
       }
-      if(likes === 'vegan'){
-        console.log('Vegan');
-        var anything = 3;
+      if(pref == 'starving'){
+        results.push(1);
       }
-      if(likes === 'omni'){
-        console.log('Omnivore');
-        var anything = 1;
+      if(pref == 'sweet'){
+        results.push(0);
       }
-      if(likes === 'flex'){
-        console.log('Flexitarian');
-        var anything = 0;
+      if(pref == 'savory'){
+        results.push(1);
       }
-      result.push(anything);
+      if(pref == 'vegan'){
+        results.push(3);
+        sweetOrNah(results);
+      }
+      if(pref == 'veggie'){
+        results.push(2);
+        sweetOrNah(results);
+      }
+      if(pref == 'flex'){
+        results.push(1);
+        sweetOrNah(results);
+      }
+      if(pref == 'omni'){
+        results.push(0);
+        sweetOrNah(results);
+      }
     });
-
-
-    $(tasteButtons).click(function(){
-      var taste = this.id;
-      if(taste == 'sweet'){
-        console.log('Sweet Treat!');
-        var craving = 0;
-      }
-      if(taste == 'savory'){
-        console.log('Savory Treat!');
-        var craving = 1;
-      }
-      result.push(craving);
-    });
-
-
-    $(hungerGames).click(function(){
-      var level = this.id;
-      if(level == 0){
-        console.log('snacktime');
-        var starving = 0;
-      }
-      if(level == 1){
-        console.log('meal');
-        var starving = 1;
-      }
-      result.push(starving);
-    });
-
-    console.log(result);
 
   }
 
   eatPrefs();
-
-
   //write a function to tally results of trues and falses
 
-  function sweetOrNah(results){
+  function sweetOrNah(r){
 
     //get results after clicks.
-    console.log(results)
+    console.log(r)
 
     //add results, determine likelyhood of flex, omni, veg, vegan
     //use mustache to template results.
 
   }
-
-  sweetOrNah(result);
 
 })();
 
