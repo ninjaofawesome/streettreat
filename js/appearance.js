@@ -18,6 +18,7 @@
   });
 
   $('.eating-prefs').click(function(){
-    $(q3).fadeOut();
+    $(q3).slideUp().fadeOut();
+    $('.description').fadeOut();
   })
 })();

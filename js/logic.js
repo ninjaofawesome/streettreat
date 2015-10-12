@@ -8,44 +8,31 @@
   console.log('logic loaded');
   function eatPrefs(){
     var buttons = document.getElementsByClassName('btn');
-    var results=[];
     var prefs = [];
     $(buttons).click(function(){
       var pref = this.id;
       if(pref === 'nosh'){
-        results.push(0);
         prefs.push(0);
       }
       if(pref == 'starving'){
-        results.push(1);
         prefs.push(1);
       }
       if(pref == 'sweet'){
-        results.push(0);
         prefs.push(-2);
       }
       if(pref == 'savory'){
-        results.push(1);
         prefs.push(-3);
       }
       if(pref == 'vegan'){
-        results.push(3);
-        // console.log(results);
         finalResults(prefs, 'vegan');
       }
       if(pref == 'veggie'){
-        results.push(2);
-        // console.log(results);
         finalResults(prefs, 'veg');
       }
       if(pref == 'flex'){
-        results.push(-1);
-        // console.log(results);
         finalResults(prefs, 'flex');
       }
       if(pref == 'omni'){
-        results.push(-2);
-        // console.log(results);
         finalResults(prefs, 'omni');
       }
     });
@@ -66,57 +53,73 @@
       console.log('sweet snack');
       if(type == 'vegan'){
         console.log('vegan');
+        $('#eats').load('partials/vegan.html');
       }
       if(type == 'veg'){
         console.log('veg');
+         $('#eats').load('partials/veggie.html');
       }
       if(type == 'flex'){
         console.log('flex');
+        $('#eats').load('partials/flex.html');
       }
       if(type == 'omni'){
         console.log('omni');
+        $('#eats').load('partials/omni.html');
       }
     } else if (total == -3){
       console.log('savory snack');
       if(type == 'vegan'){
         console.log('vegan');
+        $('#eats').load('partials/vegan.html');
       }
       if(type == 'veg'){
         console.log('veg');
+         $('#eats').load('partials/veggie.html');
       }
       if(type == 'flex'){
         console.log('flex');
+        $('#eats').load('partials/flex.html');
       }
       if(type == 'omni'){
         console.log('omni');
+        $('#eats').load('partials/omni.html');
       }
     } else if (total == 1) {
       console.log('sweet meal');
-      if(type == 'vegan'){
-        console.log('vegan');
-      }
-      if(type == 'veg'){
-        console.log('veg');
-      }
-      if(type == 'flex'){
-        console.log('flex');
-      }
-      if(type == 'omni'){
-        console.log('omni');
-      }
+     if(type == 'vegan'){
+       console.log('vegan');
+       $('#eats').load('partials/vegan.html');
+     }
+     if(type == 'veg'){
+       console.log('veg');
+        $('#eats').load('partials/veggie.html');
+     }
+     if(type == 'flex'){
+       console.log('flex');
+       $('#eats').load('partials/flex.html');
+     }
+     if(type == 'omni'){
+       console.log('omni');
+       $('#eats').load('partials/omni.html');
+     }
     } else if (total == 2){
       console.log('savory meal');
-      if(type == 'vegan'){
+     if(type == 'vegan'){
         console.log('vegan');
+        $('#eats').load('partials/vegan.html');
       }
       if(type == 'veg'){
         console.log('veg');
+         $('#eats').load('partials/veggie.html');
       }
       if(type == 'flex'){
         console.log('flex');
+        $('#eats').load('partials/flex.html');
       }
       if(type == 'omni'){
         console.log('omni');
+        $('#eats').load('partials/omni.html');
       }
     }
 
