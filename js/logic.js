@@ -53,57 +53,6 @@
   }
 
   eatPrefs();
-  //write a function to tally results of trues and falses
-
-  // function sweetOrNah(r, p){
-  //   var prefs = p;
-  //   var total = 0;
-  //   var i;
-  //   for(i=0; i<r.length; i++){
-  //     total += r[i];
-  //   }
-
-  //   if (total == -2){
-  //     // console.log('omni, sweet, snack');
-  //     finalResults(prefs, 'nonveg');
-  //    }
-  //   if (total == -1){
-  //     // console.log('flex, sweet, snack');
-  //     // console.log('omni, savory, snack');
-  //     // console.log('omni, sweeet, meal');
-  //     finalResults(prefs, 'nonveg');
-  //   }
-  //   if (total == 0){
-  //     // console.log('flex, savory, snack');
-  //     // console.log('flex, sweeet, meal');
-  //     // console.log('omni, savory, meal');
-  //     finalResults(prefs, 'nonveg');
-  //   }
-  //   if (total == 1){
-  //     // console.log('flex, savory, meal');
-  //     finalResults(prefs, 'nonveg');
-  //   };
-  //   if (total == 2){
-  //     // console.log('veg, sweet, snack');
-  //     finalResults(prefs, 'veg');
-  //   };
-  //   if (total == 3){
-  //     // console.log('vegan, sweet, snack');
-  //     // console.log('veg, savory, snack');
-  //     // console.log('veg, sweeet, meal');
-  //      finalResults(prefs, 'veg');
-  //   };
-  //   if (total == 4){
-  //     // console.log('vegan, savory, snack');
-  //     // console.log('vegan, sweeet, meal');
-  //     // console.log('veg, savory, meal');
-  //      finalResults(prefs, 'veg');
-  //   };
-  //   if (total == 5){
-  //     // console.log('vegan, savory, meal');
-  //     finalResults(prefs, 'veg');
-  //   };
-  // }
 
   function finalResults(p, t){
     var preference = p;
