@@ -12,6 +12,12 @@ p {
 .subtitle {
   font-size: 4vw; }
 
+.centered {
+  text-align: center; }
+
+.result {
+  text-align: center; }
+
 .hunger-games,
 .taste-type,
 .eating-prefs {
