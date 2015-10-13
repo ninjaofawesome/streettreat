@@ -1,3 +1,34 @@
+p {
+  text-align: justify; }
+
+.title,
+.subtitle,
+.question {
+  text-align: center; }
+
+.title {
+  font-size: 7vw; }
+
+.subtitle {
+  font-size: 4vw; }
+
+.hunger-games,
+.taste-type,
+.eating-prefs {
+  background: white;
+  color: black;
+  border: 2px solid black;
+  font-size: 1.5em;
+  width: 200px;
+  height: 50px; }
+
 #secondQuestion,
 #thirdQuestion {
   display: none; }
+
+.button-box {
+  display: block;
+  margin: 0 auto;
+  width: 75%;
+  height: auto;
+  text-align: center; }

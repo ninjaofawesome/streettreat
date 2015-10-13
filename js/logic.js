@@ -45,82 +45,58 @@
     var preference = p;
     var type = t;
     var total = 0;
+
     for(i=0; i<preference.length; i++){
         total += preference[i];
       }
 
     if(total == -2){
       console.log('sweet snack');
-      if(type == 'vegan'){
-        console.log('vegan');
-        $('#eats').load('partials/vegan.html');
-      }
-      if(type == 'veg'){
-        console.log('veg');
-         $('#eats').load('partials/veggie.html');
-      }
-      if(type == 'flex'){
-        console.log('flex');
-        $('#eats').load('partials/flex.html');
-      }
-      if(type == 'omni'){
-        console.log('omni');
-        $('#eats').load('partials/omni.html');
-      }
+      loadPartial(type, 'sweet', 'snack');
     } else if (total == -3){
       console.log('savory snack');
-      if(type == 'vegan'){
-        console.log('vegan');
-        $('#eats').load('partials/vegan.html');
-      }
-      if(type == 'veg'){
-        console.log('veg');
-         $('#eats').load('partials/veggie.html');
-      }
-      if(type == 'flex'){
-        console.log('flex');
-        $('#eats').load('partials/flex.html');
-      }
-      if(type == 'omni'){
-        console.log('omni');
-        $('#eats').load('partials/omni.html');
-      }
+      loadPartial(type, 'savory', 'snack');
     } else if (total == 1) {
       console.log('sweet meal');
-     if(type == 'vegan'){
-       console.log('vegan');
-       $('#eats').load('partials/vegan.html');
-     }
-     if(type == 'veg'){
-       console.log('veg');
-        $('#eats').load('partials/veggie.html');
-     }
-     if(type == 'flex'){
-       console.log('flex');
-       $('#eats').load('partials/flex.html');
-     }
-     if(type == 'omni'){
-       console.log('omni');
-       $('#eats').load('partials/omni.html');
-     }
+      loadPartial(type, 'sweet', 'meal');
     } else if (total == 2){
       console.log('savory meal');
-     if(type == 'vegan'){
+      loadPartial(type, 'savory', 'meal');
+    }
+
+    function loadPartial(type, flavor, size){
+      var taste = flavor;
+      var qty = size;
+      if(type == 'vegan'){
         console.log('vegan');
-        $('#eats').load('partials/vegan.html');
+        $('#eats').load('partials/vegan.html', function(r, s, x){
+          var append = document.getElementById('res-append');
+          append.innerHTML = taste + ' ' + qty;
+        });
+
       }
       if(type == 'veg'){
         console.log('veg');
-         $('#eats').load('partials/veggie.html');
+         $('#eats').load('partials/veggie.html', function(r, s, x){
+          var append = document.getElementById('res-append');
+          append.innerHTML = taste + ' ' + qty;
+         });
       }
       if(type == 'flex'){
         console.log('flex');
-        $('#eats').load('partials/flex.html');
+        $('#eats').load('partials/flex.html', function(r, s, x){
+          var append = document.getElementById('res-append');
+          append.innerHTML = taste + ' ' + qty;
+        });
       }
       if(type == 'omni'){
         console.log('omni');
-        $('#eats').load('partials/omni.html');
+        $('#eats').load('partials/omni.html', function(r, s, x){
+          var append = document.getElementById('res-append');
+          append.innerHTML = taste + ' ' + qty;
+        });
       }
+
     }
 
   }
