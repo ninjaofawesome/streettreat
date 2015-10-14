@@ -54,68 +54,73 @@
     if(total == 0){
       console.log('savory meal');
       loadPartial(type, 'savory', 'meal');
+      recommendationList('savory', 'meal');
     } else if (total == -2){
       console.log('sweet snack');
       loadPartial(type, 'sweet', 'snack');
+      recommendationList('sweet', 'snack');
     }else if (total == -3){
       console.log('savory snack');
       loadPartial(type, 'savory', 'snack');
+      recommendationList('savory', 'snack');
     } else if (total == 1) {
       console.log('sweet meal');
       loadPartial(type, 'sweet', 'meal');
+      recommendationList('sweet', 'meal');
     } else if (total == -1) {
       console.log('savory snack');
       loadPartial(type, 'savory', 'snack');
+      recommendationList('savory', 'snack');
     } else if (total == 2){
       console.log('savory meal');
       loadPartial(type, 'savory', 'meal');
+
     }
 
     function loadPartial(type, flavor, size){
       var taste = flavor;
       var qty = size;
-      var append = document.getElementById('res-append');
       if(type == 'vegan'){
         console.log('vegan');
         $('#eats').load('partials/vegan.html', function(r, s, x){
-          console.log(r);
-          console.log(s);
-          console.log(x);
           var append = document.getElementById('res-append');
           $(append).text(taste + ' ' + qty);
+          recommendationList(taste, qty, 'vegan');
         });
 
       }
       if(type == 'veg'){
         console.log('veg');
          $('#eats').load('partials/veggie.html', function(r, s, x){
-          console.log(r);
-          console.log(s);
-          console.log(x);
           var append = document.getElementById('res-append');
           $(append).text(taste + ' ' + qty);
+          recommendationList(taste, qty, 'veg');
          });
       }
       if(type == 'flex'){
         console.log('flex');
         $('#eats').load('partials/flex.html', function(r, s, x){
-          console.log(r);
-          console.log(s);
-          console.log(x);
           var append = document.getElementById('res-append');
           $(append).text(taste + ' ' + qty);
+          recommendationList(taste, qty, 'flex');
         });
       }
       if(type == 'omni'){
         console.log('omni');
         $('#eats').load('partials/omni.html', function(r, s, x){
-          console.log(r);
-          console.log(s);
-          console.log(x);
           var append = document.getElementById('res-append');
           $(append).text(taste + ' ' + qty);
+          recommendationList(taste, qty, 'omni');
+
         });
       }
+
+    }
+
+    function recommendationList(t, q, p){
+      console.log(t);
+      console.log(q);
+      console.log(p);
 
     }
 

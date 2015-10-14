@@ -1,0 +1,82 @@
+{"foods":
+  {
+    "type": "vegan",
+    "flavor": "sweet",
+    "name": "fruit cart"
+  },
+  {
+    "type": "vegan",
+    "flavor": "savory",
+    "name": "pretzel stand"
+  },
+  {
+    "type": "vegan",
+    "flavor": "sweet",
+    "name": "Cinnamon Snail Cart"
+  },
+  {
+    "type": "vegan",
+    "flavor": "savory",
+    "name": "falafel cart"
+  },
+  {
+    "type": "vegetarian",
+    "flavor": "sweet",
+    "name": "ice cream truck"
+  },
+  {
+    "type": "vegetarian",
+    "flavor": "sweet",
+    "name": "waffles and dinges cart"
+  },
+  {
+    "type": "vegetarian",
+    "flavor": "savory",
+    "name": "taco truck"
+  },
+  {
+    "type": "vegetarian",
+    "flavor": "savory",
+    "name": "pizza truck"
+  },
+  {
+    "type": "flexitarian",
+    "flavor": "sweet",
+    "name": "donut truck"
+  },
+  {
+    "type": "flexitarian",
+    "flavor": "sweet",
+    "name": "crepes truck"
+  },
+  {
+    "type": "flexitarian",
+    "flavor": "savory",
+    "name": "korean food truck"
+  },
+  {
+    "type": "flexitarian",
+    "flavor": "savory",
+    "name": "lobster roll"
+  },
+  {
+    "type": "omnivore",
+    "flavor": "sweet",
+    "name": "nut cart"
+  },
+  {
+    "type": "omnivore",
+    "flavor": "sweet",
+    "name": "crepes truck"
+  },
+  {
+    "type": "omnivore",
+    "flavor": "savory",
+    "name": "hot dogs"
+  },
+  {
+    "type": "omnivore",
+    "flavor": "savory",
+    "name": "barbeque"
+  }
+}
