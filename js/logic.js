@@ -46,15 +46,27 @@
         total += tally[i];
       }
 
-      if(total < 0){
-        console.log('omnivore');
+      if(total < 0 && total % 4 == 0){
+        $('#eats').load('partials/omniSnack.html');
+      }
+
+      if(total < 0 && total % 5 == 0){
         $('#eats').load('partials/omni.html');
       }
 
-      if(total > 0){
-        console.log('vegetarian')
+      if(total > 0 && total % 5 == 0){
         $('#eats').load('partials/veggie.html');
       }
+
+      if(total > 0 && total % 6 == 0){
+        $('#eats').load('partials/veggieSnack.html');
+      }
+
+      // if(total % 5 == 0){
+      //  //add in meal info
+      // } else {
+      //   add in snack info
+      // }
 
     }
 
