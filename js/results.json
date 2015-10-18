@@ -1,82 +1,173 @@
-{"foods":
-  {
-    "type": "vegan",
-    "flavor": "sweet",
-    "name": "fruit cart"
+{"veggie":
+  {"sweetsnack": [
+      {
+        "img": "images/monkeynaut.jpg",
+        "name": "A Nuts For Nuts Cart"
+      },
+      {
+        "img": "images/monkeynaut.jpg",
+        "name": "A Fruit Stand"
+      },
+      {
+        "img": "images/monkeynaut.jpg",
+        "name": "A Doughnut"
+      }
+    ],
+    "mixsnack": [
+      {
+        "img": "images/monkeynaut.jpg",
+        "name": "A Waffles And Dinges Cart"
+      },
+      {
+        "img": "images/monkeynaut.jpg",
+        "name": "A Fresh Squeezed Vegetable or Fruit Juice"
+      },
+      {
+        "img": "images/monkeynaut.jpg",
+        "name": "A Crepes Cart"
+      }
+    ],
+    "savsnack": [
+      {
+        "img": "images/monkeynaut.jpg",
+        "name": "A Pretzel"
+      },
+      {
+        "img": "images/monkeynaut.jpg",
+        "name": "A Taco"
+      },
+      {
+        "img": "images/monkeynaut.jpg",
+        "name": "French Fries"
+      }
+    ],
+    "sweetmeal": [
+      {
+        "img": "images/monkeynaut.jpg",
+        "name": "Milk and Cookies"
+      },
+      {
+        "img": "images/monkeynaut.jpg",
+        "name": "An Ice Cream Truck"
+      },
+      {
+        "img": "images/monkeynaut.jpg",
+        "name": "A Waffle"
+      }
+    ],
+    "mixmeal": [
+      {
+        "img": "images/monkeynaut.jpg",
+        "name": "A Crepe"
+      },
+      {
+        "img": "images/monkeynaut.jpg",
+        "name": "A Maple Grilled Cheese Sandwich"
+      },
+      {
+        "img": "images/monkeynaut.jpg",
+        "name": "Yankee Doodle Dandy Truck"
+      }
+    ],
+    "savmeal": [
+      {
+        "img": "images/monkeynaut.jpg",
+        "name": "Chinese Food"
+      },
+      {
+        "img": "images/monkeynaut.jpg",
+        "name": "A Falafel"
+      },
+      {
+        "img": "images/monkeynaut.jpg",
+        "name": "A Slice Of Pizza"
+      }
+    ]
   },
-  {
-    "type": "vegan",
-    "flavor": "savory",
-    "name": "pretzel stand"
-  },
-  {
-    "type": "vegan",
-    "flavor": "sweet",
-    "name": "Cinnamon Snail Cart"
-  },
-  {
-    "type": "vegan",
-    "flavor": "savory",
-    "name": "falafel cart"
-  },
-  {
-    "type": "vegetarian",
-    "flavor": "sweet",
-    "name": "ice cream truck"
-  },
-  {
-    "type": "vegetarian",
-    "flavor": "sweet",
-    "name": "waffles and dinges cart"
-  },
-  {
-    "type": "vegetarian",
-    "flavor": "savory",
-    "name": "taco truck"
-  },
-  {
-    "type": "vegetarian",
-    "flavor": "savory",
-    "name": "pizza truck"
-  },
-  {
-    "type": "flexitarian",
-    "flavor": "sweet",
-    "name": "donut truck"
-  },
-  {
-    "type": "flexitarian",
-    "flavor": "sweet",
-    "name": "crepes truck"
-  },
-  {
-    "type": "flexitarian",
-    "flavor": "savory",
-    "name": "korean food truck"
-  },
-  {
-    "type": "flexitarian",
-    "flavor": "savory",
-    "name": "lobster roll"
-  },
-  {
-    "type": "omnivore",
-    "flavor": "sweet",
-    "name": "nut cart"
-  },
-  {
-    "type": "omnivore",
-    "flavor": "sweet",
-    "name": "crepes truck"
-  },
-  {
-    "type": "omnivore",
-    "flavor": "savory",
-    "name": "hot dogs"
-  },
-  {
-    "type": "omnivore",
-    "flavor": "savory",
-    "name": "barbeque"
-  }
+  "omni":
+    {"sweetsnack": [
+        {
+          "img": "images/monkeynaut.jpg",
+          "name": "A doughnut"
+        },
+        {
+          "img": "images/monkeynaut.jpg",
+          "name": "Something sweet"
+        },
+        {
+          "img": "images/monkeynaut.jpg",
+          "name": "something sweet"
+        }
+      ],
+      "mixsnack": [
+        {
+          "img": "images/monkeynaut.jpg",
+          "name": "something sweet and salty"
+        },
+        {
+          "img": "images/monkeynaut.jpg",
+          "name": "something sweet and salty"
+        },
+        {
+          "img": "images/monkeynaut.jpg",
+          "name": "something sweet and salty"
+        }
+      ],
+      "savsnack": [
+        {
+          "img": "images/monkeynaut.jpg",
+          "name": "Pupusas"
+        },
+        {
+          "img": "images/monkeynaut.jpg",
+          "name": "A Taco"
+        },
+        {
+          "img": "images/monkeynaut.jpg",
+          "name": "A Pretzel"
+        }
+      ],
+      "sweetmeal": [
+        {
+          "img": "images/monkeynaut.jpg",
+          "name": "something sweet"
+        },
+        {
+          "img": "images/monkeynaut.jpg",
+          "name": "something sweet"
+        },
+        {
+          "img": "images/monkeynaut.jpg",
+          "name": "something sweet"
+        }
+      ],
+      "mixmeal": [
+        {
+          "img": "images/monkeynaut.jpg",
+          "name": "Gorilla Cheese Grilled Cheese"
+        },
+        {
+          "img": "images/monkeynaut.jpg",
+          "name": "Dub Pies"
+        },
+        {
+          "img": "images/monkeynaut.jpg",
+          "name": "Yankee Doodle Dandy Truck"
+        }
+      ],
+      "savmeal": [
+        {
+          "img": "images/monkeynaut.jpg",
+          "name": "A Lobster Roll"
+        },
+        {
+          "img": "images/monkeynaut.jpg",
+          "name": "BBQ"
+        },
+        {
+          "img": "images/monkeynaut.jpg",
+          "name": "Cheese Steaks"
+        }
+      ]
+    }
 }

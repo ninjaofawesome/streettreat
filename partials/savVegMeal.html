@@ -1,0 +1,14 @@
+$('#eats').load('partials/sweetVegSnack.html');<h1 class="centered">We've found your perfect Vegetarian Street Treat for you!</h1>
+
+<h2 class="result">It sounds like you would like a savory meal.</h2>
+
+<div class="row" id="eating">
+  {{#veggie}}
+    <div class="col-md-4">
+    {{#savmeal}}
+      <img src={{img}} class="result-photo">
+      <h3 class="centered result">{{name}}</h3>
+    {{/savmeal}}
+    </div>
+  {{/veggie}}
+</div>

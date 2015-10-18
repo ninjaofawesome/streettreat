@@ -28,135 +28,117 @@
       }
       if(pref == 'veg'){
         prefs.push(100);
-        // finalResults(prefs, 'vegan');
         showResults(prefs);
       }
       if(pref == 'omni'){
         prefs.push(-100);
-        // finalResults(prefs, 'omni');.
         showResults(prefs);
       }
     });
 
     function showResults(p){
       var tally= p;
-      console.log(tally);
       var total = 0;
       for(var i = 0; i<tally.length; i++){
         total += tally[i];
       }
+      console.log(total);
 
-      if(total < 0 && total % 4 == 0){
-        $('#eats').load('partials/omniSnack.html');
+      if(total == 116){
+        console.log("savory veg snack");
+        var template = 'partials/savVegSnack.html';
+        // $('#eats').load(template);
+        mustacheLoad(template);
+      } else if(total == 126){
+        console.log('mixed veg snack');
+        var template = 'partials/veggieSnack.html';
+        // $('#eats').load(template);
+        mustacheLoad(template);
+      } else if(total == 106){
+        console.log('sweet veg snack');
+        var template = 'partials/sweetVegSnack.html';
+        // $('#eats').load(template);
+        mustacheLoad(template);
+      } else if(total == 125){
+        console.log("savory veg meal");
+        var template ='partials/savVegMeal.html';
+        // $('#eats').load(template);
+        mustacheLoad(template);
+      } else if(total == 135){
+        console.log('mixed veg meal');
+        var template = 'partials/veggieMeal.html';
+        // $('#eats').load(template);
+        mustacheLoad(template);
+      } else if(total == 115){
+        console.log('sweet veg meal');
+        var template = 'partials/sweetVegMeal.html';
+        // $('#eats').load(template);
+        mustacheLoad(template);
+      } else if(total == -75){
+        console.log("savory omni meal");
+        var template = 'partials/savOmniMeal.html';
+        // $('#eats').load(template);
+        mustacheLoad(template);
       }
-
-      if(total < 0 && total % 5 == 0){
-        $('#eats').load('partials/omni.html');
+      if(total == -65){
+        console.log('mixed omni meal');
+        var template = 'partials/omni.html';
+        // $('#eats').load(template);
+        mustacheLoad(template);
       }
-
-      if(total > 0 && total % 5 == 0){
-        $('#eats').load('partials/veggie.html');
+      if(total == -85){
+        console.log('sweet omni meal');
+        var template = 'partials/sweetOmniMeal.html';
+        // $('#eats').load(template);
+        mustacheLoad(template);
+      } else if(total == -94){
+        console.log("savory omni snack");
+        var template = 'partials/savOmniSnack.html';
+        // $('#eats').load(template);
+        mustacheLoad(template);
       }
-
-      if(total > 0 && total % 6 == 0){
-        $('#eats').load('partials/veggieSnack.html');
+      if(total == -74){
+        console.log('mixed omni snack');
+        var template = 'partials/omniSnack.html';
+        // $('#eats').load(template);
+        mustacheLoad(template);
       }
-
-      // if(total % 5 == 0){
-      //  //add in meal info
-      // } else {
-      //   add in snack info
-      // }
-
+      if(total == -84){
+        console.log('sweet omni snack');
+        var template = 'partials/sweetOmniSnack.html';
+        // $('#eats').load(template);
+        mustacheLoad(template);
+      }
     }
-
   }
 
+
+  function mustacheLoad(tmpl){
+    console.log('mustache templates');
+    console.log(tmpl);
+    var url = 'js/results.js';
+    var template = tmpl;
+    $.ajax({
+        cache: false,
+        url: 'js/results.json',
+        type: 'GET',
+        dataType: 'json',
+        success: function(data){
+        console.log('success!');
+        var allData = data;
+
+
+        var rendered = Mustache.to_html(template, data);
+        $('#eating').html(rendered);
+      },
+      error: function(data, xhr){
+        console.log('Fail!');
+        console.log(data);
+        console.log(xhr);
+      }
+    });
+
+  }
   eatPrefs();
-
-  // function finalResults(p, t){
-  //   var preference = p;
-  //   var type = t;
-  //   var total = 0;
-
-  //   for(i=0; i<preference.length; i++){
-  //       total += preference[i];
-  //       console.log(total)
-  //     }
-
-  //   if(total == 0){
-  //     console.log('savory meal');
-  //     loadPartial(type, 'savory', 'meal');
-  //     recommendationList('savory', 'meal');
-  //   } else if (total == -2){
-  //     console.log('sweet snack');
-  //     loadPartial(type, 'sweet', 'snack');
-  //     recommendationList('sweet', 'snack');
-  //   }else if (total == -3){
-  //     console.log('savory snack');
-  //     loadPartial(type, 'savory', 'snack');
-  //     recommendationList('savory', 'snack');
-  //   } else if (total == 1) {
-  //     console.log('sweet meal');
-  //     loadPartial(type, 'sweet', 'meal');
-  //     recommendationList('sweet', 'meal');
-  //   } else if (total == -1) {
-  //     console.log('savory snack');
-  //     loadPartial(type, 'savory', 'snack');
-  //     recommendationList('savory', 'snack');
-  //   } else if (total == 2){
-  //     console.log('savory meal');
-  //     loadPartial(type, 'savory', 'meal');
-
-  //   }
-
-  //   function loadPartial(type, flavor, size){
-  //     var taste = flavor;
-  //     var qty = size;
-  //     if(type == 'vegan'){
-  //       console.log('vegan');
-  //       $('#eats').load('partials/vegan.html', function(r, s, x){
-  //         var append = document.getElementById('res-append');
-  //         $(append).text(taste + ' ' + qty);
-  //         recommendationList(taste, qty, 'vegan');
-  //       });
-
-  //     }
-  //     if(type == 'veg'){
-  //       console.log('veg');
-  //        $('#eats').load('partials/veggie.html', function(r, s, x){
-  //         var append = document.getElementById('res-append');
-  //         $(append).text(taste + ' ' + qty);
-  //         recommendationList(taste, qty, 'veg');
-  //        });
-  //     }
-  //     if(type == 'flex'){
-  //       console.log('flex');
-  //       $('#eats').load('partials/flex.html', function(r, s, x){
-  //         var append = document.getElementById('res-append');
-  //         $(append).text(taste + ' ' + qty);
-  //         recommendationList(taste, qty, 'flex');
-  //       });
-  //     }
-  //     if(type == 'omni'){
-  //       console.log('omni');
-  //       $('#eats').load('partials/omni.html', function(r, s, x){
-  //         var append = document.getElementById('res-append');
-  //         $(append).text(taste + ' ' + qty);
-  //         recommendationList(taste, qty, 'omni');
-
-  //       });
-  //     }
-
-  //   }
-
-  //   function recommendationList(t, q, p){
-  //     console.log(t);
-  //     console.log(q);
-  //     console.log(p);
-
-  //   }
-
-  // }
 
 })();
