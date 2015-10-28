@@ -1,0 +1,16 @@
+<h1 class="centered">We've found your perfect Vegetarian Street Treat for you!</h1>
+
+<h2 class="result">It sounds like you would like a sweet snack.</h2>
+
+<div class="row">
+  <script id="eating" type="x-tmpl-mustache">
+    {{#veggie}}
+      <div class="col-md-4">
+      {{#sweetsnack}}
+        <img src={{img}} class="result-photo">
+        <h3 class="centered result">{{name}}</h3>
+      {{/sweetsnack}}
+      </div>
+    {{/veggie}}
+  </script>
+</div>
